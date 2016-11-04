@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>GPS Calculator DeLuxe</title>
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+      
+      #over_map { position: absolute; top: 10px; right: 10px; z-index: 99;}
+      
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    
+    </style>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="bearingassistant.js"></script>
+  </head>
+  <body>    
+    <div id="map-canvas"></div>
+    <div id="over_map" class="well well-sm">
+      <h5>GPS Information</h5>
+      <table class="table">
+        <tr><td colspan="2">From:</td></tr>
+        <tr>
+          <td><span class="label label-danger">Latitude:</span></td>
+          <td><div id="from-lat"></div></td>
+        </tr>
+        <tr>
+          <td><span class="label label-danger">Longitude:</span></td>
+          <td><div id="from-lng"></div></td>
+        </tr>
+        <tr><td colspan="2">To:</td></tr>        
+        <tr>
+          <td><span class="label label-success">Latitude:</span></td>
+          <td><div id="to-lat"></div></td>
+        </tr>
+        <tr>
+          <td><span class="label label-success">Longitude:</span></td>
+          <td><div id="to-lng"></div></td>
+        </tr>
+        <tr>
+          <td><span class="label label-default">Distance:</span></td>
+          <td><div id="distance"></div></td>
+        </tr>
+        <tr>
+          <td><span class="label label-default">Bearing:</span></td>
+          <td><div id="bearing"></div></td>
+        </tr>
+
+      </table>
+    </div>
+  </body>
+</html>    
